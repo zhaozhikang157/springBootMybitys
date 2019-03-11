@@ -3,6 +3,6 @@
 <mapper namespace="com.mapper.LoginMapper" >
 
     <select id="login" resultType="java.lang.String">
-      select field_name from policy_info_map where id = 4
+      select name from user where id = 1
     </select>
 </mapper>
