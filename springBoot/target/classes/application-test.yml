@@ -10,6 +10,9 @@ mybatis:
   type-aliases-package: com.entity
 
 spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+
   datasource:
       url: jdbc:mysql://localhost:3306/test
       username: root
@@ -28,3 +31,7 @@ spring:
         remove-abandoned: true  #超过时间限制是否回收
         remove-abandoned-timeout: 180 #关闭空闲连接超时时间
         log-abandoned: true
+
+logging:
+  level:
+    com.mapper : debug

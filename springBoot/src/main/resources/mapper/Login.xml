@@ -3,6 +3,6 @@
 <mapper namespace="com.mapper.LoginMapper" >
 
     <select id="login" resultType="java.lang.String">
-      select name from user where id = 1
+      select id from user where name = #{name} and pwd = #{pwd}
     </select>
 </mapper>
