@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <input type="text" id="name" name="name">
+    <input type="text" id="pwd" name="pwd">
+    <input type="button" value="登陆" onclick="login()">
+</body>
+
+<script>
+    function login (){
+        $.ajax({
+            url:"/login/login",
+            data:{name:$("#name").val(),"pwd":$("#pwd").val()},
+            dataType:"text",
+            type:"post",
+            success:function(msg){
+                alert(msg)
+            }
+        })
+    }
+</script>
+</html>
